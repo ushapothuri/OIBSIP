@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()"> 🌙 </button>
+
+    <div class="auth-container">
+        <div class="auth-card dashboard">
+            <h1> Welcome, <span id="welcomeName">User</span> 👋 </h1>
+            <p class="subtitle"> Your account information </p>
+            <div class="profile-card">
+                <h3>User Profile</h3>
+                <p>
+                    <strong>Name:</strong>
+                    <span id="userName">
+                    </span>
+                </p>
+                <p>
+                    <strong>Email:</strong>
+                    <span id="userEmail">
+                    </span>
+                </p>
+                <p>
+                    <strong>Last Login:</strong>
+                    <span id="loginTime">
+                    </span>
+                </p>
+            </div>
+            <button class="primary-btn" onclick="logoutUser()"> Logout </button>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+    <script src="script.js"></script>
+
+    <script>
+        loadDashboard();
+    </script>
+</body>
+</html>

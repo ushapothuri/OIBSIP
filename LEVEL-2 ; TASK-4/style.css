@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: 0.4s;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.auth-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.auth-card {
+    width: 380px;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    animation: slide .5s;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+label {
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #667eea;
+}
+
+.password-box {
+    display: flex;
+}
+
+.password-box input {
+    border-radius: 10px 0 0 10px;
+}
+
+.password-box button {
+    width: 50px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 10px;
+    background: #667eea;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.primary-btn:hover {
+    transform: scale(1.02);
+}
+
+.error {
+    font-size: 13px;
+    color: #dc2626;
+    display: block;
+    margin-top: 5px;
+}
+
+.switch {
+    text-align: center;
+    margin-top: 20px;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.strength {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#strengthBar {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+#strengthText {
+    font-size: 13px;
+}
+
+.profile-card {
+    background: #f3f4f6;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+#toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #111;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    display: none;
+}
+
+.dark {
+    background: #111827;
+}
+
+.dark .auth-card {
+    background: #1f2937;
+    color: white;
+}
+
+.dark h1 {
+    color: white;
+}
+
+.dark .subtitle {
+    color: #ddd;
+}
+
+.dark input {
+    background: #374151;
+    color: white;
+    border: none;
+}
+
+.dark .profile-card {
+    background: #374151;
+}
+
+@media(max-width:450px) {
+    .auth-card {
+        width: 90%;
+    }
+}

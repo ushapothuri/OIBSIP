@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Authentication System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Create Account</h1>
+            <p class="subtitle">Register to continue</p>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name" placeholder="Enter name">
+                    <span class="error" id="nameError"></span>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="password-box">
+                        <input type="password" id="password" placeholder="Create password" onkeyup="checkStrength()">
+                        <button type="button" onclick="togglePassword('password')">👁 </button>
+                    </div>
+                    <div class="strength">
+                        <div id="strengthBar"></div>
+                    </div>
+                    <p id="strengthText"></p>
+                    <span class="error" id="passwordError"></span>
+                </div>
+                <button class="primary-btn"> Create Account </button>
+            </form>
+            <p class="switch">
+                Already have an account?
+                <a href="index.html"> Login </a>
+            </p>
+        </div>
+    </div>
+    <div id="toast"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
