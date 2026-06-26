@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h1>🚀 TaskFlow</h1>
+        <button id="themeToggle"> 🌙 </button>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2> Manage Your Tasks Easily </h2>
+            <p> Simple productivity tracker </p>
+        </section>
+
+        <section class="controls">
+            <div class="input-box">
+                <input id="taskInput" type="text" placeholder="Enter your task...">
+                <button id="addTask"> Add Task </button>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div>
+                <h3>Total</h3>
+                <span id="totalCount"> 0 </span>
+            </div>
+
+            <div>
+                <h3>Pending</h3>
+                <span id="pendingCount"> 0 </span>
+            </div>
+            <div>
+                <h3>Completed</h3>
+                <span id="completedCount"> 0 </span>
+            </div>
+
+        </section>
+
+        <section class="board">
+            <div class="column">
+                <h2> ⏳ Pending Task </h2>
+                <div id="pendingTasks">
+                </div>
+            </div>
+
+            <div class="column">
+                <h2> ✅ Completed Tasks </h2>
+                <div id="completedTasks">
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
